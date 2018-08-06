@@ -13,9 +13,7 @@ public class MovementController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log(reversed);
-        Debug.Log(above.transform.rotation);
-		if(above.transform.rotation.y == 1.0)
+        if(above.transform.rotation.y == 1.0)
         {
             reversed = -1;
         }
@@ -23,7 +21,6 @@ public class MovementController : MonoBehaviour {
         {
             reversed = 1;
         }
-        Debug.Log(reversed);
 	}
 	
 	// Update is called once per frame

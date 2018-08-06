@@ -8,10 +8,6 @@ public class PlayerSetup : NetworkBehaviour {
 
     Camera sceneCamera;
 
-    public GameObject below;
-
-    Transform originalTransform;
-
     void Start()
     {
         if (!isLocalPlayer)
@@ -29,8 +25,6 @@ public class PlayerSetup : NetworkBehaviour {
                 sceneCamera.gameObject.SetActive(false);
             }
         }
-
-        originalTransform = this.transform;
     }
 
     void OnDisable()
@@ -43,10 +37,6 @@ public class PlayerSetup : NetworkBehaviour {
 
     void Update()
     {
-        Debug.Log(this.transform.position);
-        Debug.Log(originalTransform.position);
-        Debug.Log(below.transform.position);
-        Debug.Log(" ");
         //this.transform.position = originalTransform.position + below.transform.position;
     }
 
